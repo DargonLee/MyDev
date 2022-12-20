@@ -36,7 +36,7 @@ brew install python3
 - 导出环境变量
 
 ```shell
-export PATH=${PATH}:/usr/local/Cellar/python@3.9/3.9.12/bin
+export PATH="$(brew --prefix python@3.11)/libexec/bin:$PATH"
 ```
 
 #### Pip安装

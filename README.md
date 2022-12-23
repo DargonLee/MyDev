@@ -233,6 +233,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 open ~/.zshrc
 ```
 
+- 安装Hack Nerd 字体库
+- iTerm -> Preferences -> Profiles -> Text -> font -> 修改成 Hack Nerd Font
+
 #### 插件
 
 ```shell

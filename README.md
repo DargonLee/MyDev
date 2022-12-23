@@ -25,6 +25,24 @@ export PATH=/Users/apple/Library/Python/3.8/bin:$PATH
 export PATH=/Users/apple/Library/Python/2.7.18/bin:$PATH
 ```
 
+下载Python2.7.18
+
+```shell
+brew install pyenv
+pyenv install 2.7.18
+open ~/.pyenv/version
+```
+
+知道2.7.18版本放到`/Users/apple/Library/Python/`这里去
+
+编辑pip2
+
+```shell
+vim pip2
+```
+
+![image-20221223150323392](README.assets/image-20221223150323392.png)
+
 #### Homebrew安装
 
 - 安装命令

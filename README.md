@@ -207,6 +207,32 @@ cd ..
 rm -rf fonts
 ```
 
+**powerlevel10k**主题安装
+
+- 安装
+
+```shell
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+- 编辑 .zshrc 文件， 文件路径 ~/.zshrc
+
+```shell
+open ~/.zshrc
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+```
+
+**.zshrc**设置
+
+- 下载 Dream_01.zshrc 或 Dream_02.zshrc
+- 找到 .zshrc 文件将 Dream_01.zshrc 或 Dream_02.zshrc 中代码复制到 zshrc 最下面
+- 文件目录 :
+
+```bash
+open ~/.zshrc
+```
+
 #### 插件
 
 ```shell

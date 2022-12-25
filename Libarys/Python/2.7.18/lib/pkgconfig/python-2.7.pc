@@ -1,0 +1,13 @@
+prefix=/Users/sungt/.pyenv/versions/2.7.18
+exec_prefix=${prefix}
+libdir=/Users/sungt/.pyenv/versions/2.7.18/lib
+includedir=${prefix}/include
+
+Name: Python
+Description: Python library
+Requires: 
+Version: 2.7
+Libs.private: -lintl -ldl  -framework CoreFoundation
+Libs: -L${libdir} -lpython2.7
+Cflags: -I${includedir}/python2.7 
+

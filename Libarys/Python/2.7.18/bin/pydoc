@@ -1,4 +1,4 @@
-#!/Users/sungt/.pyenv/versions/2.7.18/bin/python2.7
+#!/Users/apple/Library/Python/2.7.18/bin/python2.7
 
 import pydoc
 if __name__ == '__main__':

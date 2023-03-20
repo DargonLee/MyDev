@@ -44,8 +44,6 @@ git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.ustc
 brew update
 ```
 
-
-
 ### Python安装
 
 官网地址:https://www.python.org/
@@ -69,7 +67,7 @@ pyenv install 2.7.18
 open ~/.pyenv/version
 ```
 
-知道2.7.18版本放到`/Users/apple/Library/Python/`这里去
+知道2.7.18版本放到 `/Users/apple/Library/Python/`这里去
 
 编辑pip2
 
@@ -197,13 +195,10 @@ ZSH_THEME="spaceship"
 **powerlevel9k**主题安装
 
 - 用 powerlevel9k 为例，通过 `git clone` 下载到 oh-my-zsh 放置第三方主题的目录中
-
 - ```text
   git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
   ```
-
-- 修改`ZSH_THEME="spaceship"`为`ZSH_THEME="powerlevel9k"`
-
+- 修改 `ZSH_THEME="spaceship"`为 `ZSH_THEME="powerlevel9k"`
 - ```text
   source ~/.zshrc
   ```
@@ -228,7 +223,7 @@ zsh: command not found: pip
 sudo easy_install pip
 ```
 
-PowerFonts 是一个字体库，要安装字体库需要先把 `git clone` 到本地，然后执行源码中的 `install.sh` 
+PowerFonts 是一个字体库，要安装字体库需要先把 `git clone` 到本地，然后执行源码中的 `install.sh`
 
 具体的流程如下：
 
@@ -290,14 +285,11 @@ plugins=(
   cd ~/.oh-my-zsh/custom/plugins/
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
   ```
-
 - 然后在文件末尾添加：
-
 - ```shell
   source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # 如果使用命令 brew 安装，则是添加这条命令语句
   ```
-
 - ```shell
   source ~/.zshrc
   ```
@@ -318,7 +310,6 @@ plugins=(
   ```shell
   brew install gnupg 
   ```
-
 - 安装mpapis公钥
 
   ```shell
@@ -330,13 +321,11 @@ plugins=(
   ```shell
    gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
   ```
-
 - 安装rvm
 
   ```shell
   \curl -sSL https://get.rvm.io | bash -s stable --ruby
   ```
-
 - 常用命令
 
   ```shell
@@ -345,13 +334,11 @@ plugins=(
   ——列出可供RVM使用的Ruby版本：rvm list
   ——列出可安装的版本：rvm list known
   ```
-
 - 查看一下Ruby的版本
 
   ```
   rvm list known
   ```
-
 - 可以看到当前的最新版本，然后通过以下命令来安装它：
 
   ```shell
@@ -421,17 +408,15 @@ git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git  ~/.cocoa
 pod search AFNetworking
 ```
 
-
-
 ### Flutter安装
 
-#### 创建`opt`文件夹
+#### 创建 `opt`文件夹
 
 ![image-20220908150811298](README.assets/image-20220908150811298.png)
 
 下载安装包https://flutter.cn/docs/get-started/install/macos
 
-#### 解压到`opt`文件夹目录下
+#### 解压到 `opt`文件夹目录下
 
 ![image-20220908150924694](README.assets/image-20220908150924694.png)
 
@@ -485,12 +470,11 @@ java -version
 
 #### 安装theos
 
-- 下载 
+- 下载
 
   ```shell
   sudo git clone --recursive https://github.com/theos/theos.git /opt/theos
   ```
-
 - 配置环境变量
 
   ```shell
@@ -547,3 +531,17 @@ command alias freshxlldb command script import /opt/xia0LLDB/src/xlldb.py
 ### 下载Xcode的工具
 
 https://xcdownloader.com/
+
+https://github.com/RobotsAndPencils/XcodesApp/
+
+CodeSnippet
+
+```powershell
+~/Library/Developer/Xcode/UserData/CodeSnippet
+```
+
+### 配置Sublime的终端命令行工具
+
+```shell
+ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl  /usr/local/bin/sublime
+```

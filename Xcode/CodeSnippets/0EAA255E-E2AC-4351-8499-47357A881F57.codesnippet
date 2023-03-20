@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>mark</string>
+	<string>delegate</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>// MARK: - &lt;#description#&gt;</string>
+	<string>@property (nullable, nonatomic, weak) id &lt;&lt;#@protocol#&gt;&gt; delegate;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1065D276-2B13-4655-B82A-2BD86F54739A</string>
+	<string>0EAA255E-E2AC-4351-8499-47357A881F57</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>My Mark For Swift</string>
+	<string>My Delegate</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

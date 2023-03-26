@@ -559,16 +559,16 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl  /usr/loca
 - Beyond Compare
 - GitHub Desktop
 - Hopper Disassembler
-- LocalizationEditor
-- LX Music
-- MachOView
+- LocalizationEditor（https://github.com/igorkulman/iOSLocalizationEditor）
+- LX Music（https://github.com/lyswhut/lx-music-desktop）
+- MachOView（https://github.com/fangshufeng/MachOView）
 - Microsoft Edge
 - OneDrive
 - Pasta
 - Snipaste
 - Sublime Text
 - SwitchHosts!
-- Typora
+- Typora（主题：https://github.com/liangjingkanji/DrakeTyporaTheme）
 - Visual Studio Code
-- ZY Player
+- ZY Player（https://github.com/Hunlongyu/ZY-Player）
 - XMind

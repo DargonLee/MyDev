@@ -1,8 +1,8 @@
 [toc]
 
-# 常用的Mac开发环境
+# 常用的 Mac 开发环境
 
-### Homebrew安装
+### Homebrew 安装
 
 官网地址:https://brew.sh/
 
@@ -44,13 +44,13 @@ git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.ustc
 brew update
 ```
 
-### Python安装
+### Python 安装
 
 官网地址:https://www.python.org/
 
-#### 使用Xcode自带的
+#### 使用 Xcode 自带的
 
-环境变量配置：这里使用的python为Xcode自带的
+环境变量配置：这里使用的 python 为 Xcode 自带的
 
 ```shell
 export PATH=/Users/apple/Library/Python/3.8/bin:$PATH
@@ -59,7 +59,7 @@ export PATH=/Users/apple/Library/Python/3.8/bin:$PATH
 export PATH=/Users/apple/Library/Python/2.7.18/bin:$PATH
 ```
 
-下载Python2.7.18
+下载 Python2.7.18
 
 ```shell
 brew install pyenv
@@ -67,9 +67,9 @@ pyenv install 2.7.18
 open ~/.pyenv/version
 ```
 
-知道2.7.18版本放到 `/Users/apple/Library/Python/`这里去
+知道 2.7.18 版本放到 `/Users/apple/Library/Python/`这里去
 
-编辑pip2
+编辑 pip2
 
 ```shell
 vim pip2
@@ -77,7 +77,7 @@ vim pip2
 
 ![image-20221223150323392](README.assets/image-20221223150323392.png)
 
-#### Homebrew安装
+#### Homebrew 安装
 
 - 安装命令
 
@@ -91,7 +91,7 @@ brew install python3
 export PATH="$(brew --prefix python@3.11)/libexec/bin:$PATH"
 ```
 
-#### Pip安装
+#### Pip 安装
 
 官网地址：https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py
 
@@ -103,7 +103,7 @@ sudo python2 get-pip.py
 sudo python3 get-pip.py
 ```
 
-### Nodejs安装
+### Nodejs 安装
 
 官网地址:http://nodejs.cn/download/
 
@@ -129,20 +129,20 @@ npm -v
 node -v
 ```
 
-#### 修改npm的源
+#### 修改 npm 的源
 
 ```shell
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 cnpm install [name]
 ```
 
-### iTerm2安装
+### iTerm2 安装
 
 官网地址:http://iterm2.com/downloads.html
 
 博客:https://zhuanlan.zhihu.com/p/550022490
 
-### oh-my-zsh安装
+### oh-my-zsh 安装
 
 oh-my-zsh 的官网地址：https://ohmyz.sh/
 
@@ -264,7 +264,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 open ~/.zshrc
 ```
 
-- 安装Hack Nerd 字体库
+- 安装 Hack Nerd 字体库
 - iTerm -> Preferences -> Profiles -> Text -> font -> 修改成 Hack Nerd Font
 
 #### 插件
@@ -279,7 +279,7 @@ plugins=(
 )
 ```
 
-**zsh-syntax-highlighting安装**
+**zsh-syntax-highlighting 安装**
 
 - ```shell
   cd ~/.oh-my-zsh/custom/plugins/
@@ -294,23 +294,24 @@ plugins=(
   source ~/.zshrc
   ```
 
-**zsh-autosuggestions安装**
+**zsh-autosuggestions 安装**
 
 - ```shell
   cd ~/.oh-my-zsh/custom/plugins/
   git clone https://github.com/zsh-users/zsh-autosuggestions
   ```
 
-### Cocoapods安装
+### Cocoapods 安装
 
-#### 安装rvm
+#### 安装 rvm
 
-- 安装mpapis公钥。但是，正如安装页面所记录的，您可能需要gpg。Mac OS X不附带gpg，因此在安装公钥之前，您需要安装gpg。
+- 安装 mpapis 公钥。但是，正如安装页面所记录的，您可能需要 gpg。Mac OS X 不附带 gpg，因此在安装公钥之前，您需要安装 gpg。
 
   ```shell
-  brew install gnupg 
+  brew install gnupg
   ```
-- 安装mpapis公钥
+
+- 安装 mpapis 公钥
 
   ```shell
   gpg --keyserver hkp://pgp.mit.edu --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
@@ -321,11 +322,13 @@ plugins=(
   ```shell
    gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
   ```
-- 安装rvm
+
+- 安装 rvm
 
   ```shell
   \curl -sSL https://get.rvm.io | bash -s stable --ruby
   ```
+
 - 常用命令
 
   ```shell
@@ -334,21 +337,23 @@ plugins=(
   ——列出可供RVM使用的Ruby版本：rvm list
   ——列出可安装的版本：rvm list known
   ```
-- 查看一下Ruby的版本
+
+- 查看一下 Ruby 的版本
 
   ```
   rvm list known
   ```
+
 - 可以看到当前的最新版本，然后通过以下命令来安装它：
 
   ```shell
-  rvm install 2.4 
+  rvm install 2.4
   ```
 
   安装好后将它设为默认版本：
 
   ```shell
-  rvm use 2.4 --default 
+  rvm use 2.4 --default
   ```
 
 #### 更换源
@@ -382,7 +387,7 @@ https://gems.ruby-china.com/
 sudo gem install -n /usr/local/bin cocoapods
 ```
 
-如果安装了多个Xcode使用下面的命令选择（一般需要选择最近的Xcode版本）
+如果安装了多个 Xcode 使用下面的命令选择（一般需要选择最近的 Xcode 版本）
 
 ```csharp
 sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
@@ -408,7 +413,7 @@ git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git  ~/.cocoa
 pod search AFNetworking
 ```
 
-### Flutter安装
+### Flutter 安装
 
 #### 创建 `opt`文件夹
 
@@ -429,7 +434,7 @@ export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 ```
 
-### Java安装
+### Java 安装
 
 官网地址：https://www.oracle.com/java/technologies/downloads
 
@@ -463,18 +468,19 @@ export CLASSPATH
 #### 验证
 
 ```shell
-java -version 
+java -version
 ```
 
-### MonkeyDev安装
+### MonkeyDev 安装
 
-#### 安装theos
+#### 安装 theos
 
 - 下载
 
   ```shell
   sudo git clone --recursive https://github.com/theos/theos.git /opt/theos
   ```
+
 - 配置环境变量
 
   ```shell
@@ -482,13 +488,13 @@ java -version
   export PATH=$PATH:$THEOS/bin
   ```
 
-#### 安装ldid
+#### 安装 ldid
 
 ```shell
 brew install ldid
 ```
 
-#### 安装MonkeyDev
+#### 安装 MonkeyDev
 
 - 安装
 
@@ -508,7 +514,7 @@ file not found: /usr/lib/libstdc++.dylib
 
 https://github.com/devdawei/libstdc-
 
-### LLDB调试工具库
+### LLDB 调试工具库
 
 #### 下载
 
@@ -528,10 +534,9 @@ command script import /opt/xia0LLDB/src/xlldb.py
 command alias freshxlldb command script import /opt/xia0LLDB/src/xlldb.py
 ```
 
-### 下载Xcode的工具
+### 下载 Xcode 的工具
 
 https://xcdownloader.com/
-
 https://github.com/RobotsAndPencils/XcodesApp/
 
 CodeSnippet
@@ -540,8 +545,30 @@ CodeSnippet
 ~/Library/Developer/Xcode/UserData/CodeSnippet
 ```
 
-### 配置Sublime的终端命令行工具
+### 配置 Sublime 的终端命令行工具
 
 ```shell
 ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl  /usr/local/bin/sublime
 ```
+
+### 必装软件
+
+- Alfred
+- Android Studio
+- App Cleaner & Uninstaller
+- Beyond Compare
+- GitHub Desktop
+- Hopper Disassembler
+- LocalizationEditor
+- LX Music
+- MachOView
+- Microsoft Edge
+- OneDrive
+- Pasta
+- Snipaste
+- Sublime Text
+- SwitchHosts!
+- Typora
+- Visual Studio Code
+- ZY Player
+- XMind

@@ -347,13 +347,31 @@ plugins=(
 - 可以看到当前的最新版本，然后通过以下命令来安装它：
 
   ```shell
-  rvm install 2.4
+  rvm install 2.6.0
   ```
 
   安装好后将它设为默认版本：
 
   ```shell
-  rvm use 2.4 --default
+  rvm use 2.6.0 --default
+  ```
+
+#### M1芯片安装
+
+- 安装
+
+  ```shell
+  sudo gem install -n /usr/local/bin cocoapods
+  ```
+
+- 安装本地库
+
+  ```shell
+  // 国外地址，如果你能科学上网的话，可以使用这个方法
+  git clone https://github.com/CocoaPods/Specs.git ~/.cocoapods/repos/trunk
+  
+  // 清华大学镜像，速度杠杠的，推荐使用
+  git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git  ~/.cocoapods/repos/trunk
   ```
 
 #### 更换源

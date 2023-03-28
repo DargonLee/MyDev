@@ -150,6 +150,17 @@ oh-my-zsh 的官网地址：https://ohmyz.sh/
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+```shell
+1、把 oh-my-zsh 项目 Clone 下来
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+2、复制 .zshrc
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+3、更改你的默认 Shell
+chsh -s /bin/zsh
+```
+
+
+
 #### 修改默认的 shell
 
 安装完成之后，在 `/bin` 目录下会多出一个 `zsh` 的文件。

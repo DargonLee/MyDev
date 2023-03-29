@@ -314,6 +314,12 @@ plugins=(
 
 ### Cocoapods 安装
 
+#### Homebrew 安装
+
+```shell
+brew install cocoapods
+```
+
 #### 安装 rvm
 
 - 安装 mpapis 公钥。但是，正如安装页面所记录的，您可能需要 gpg。Mac OS X 不附带 gpg，因此在安装公钥之前，您需要安装 gpg。
@@ -337,7 +343,17 @@ plugins=(
 - 安装 rvm
 
   ```shell
-  \curl -sSL https://get.rvm.io | bash -s stable --ruby
+  # 安装RVM
+  curl -sSL https://get.rvm.io | bash -s stable --ruby
+  # 载入 RVM 环境
+  source ~/.rvm/scripts/rvm
+  # 修改 RVM 下载 Ruby 的源 为 Ruby China 镜像
+  echo "ruby_url=<https://cache.ruby-china.com/pub/ruby>" > ~/.rvm/user/db
+  # 检查安装结果(如果能显示版本号,则安装成功 )
+  rvm -v
+  ##打印以下结果,代表安装成功: rvm 1.29.9 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [<https://rvm.io/]> 
+  # 安装openssl 避免报错
+  rvm pkg install openssl 
   ```
 
 - 常用命令
@@ -365,6 +381,12 @@ plugins=(
 
   ```shell
   rvm use 2.6.0 --default
+  ```
+
+- 安装
+
+  ```shell
+  sudo gem install -n /usr/local/bin cocoapods
   ```
 
 #### M1芯片安装

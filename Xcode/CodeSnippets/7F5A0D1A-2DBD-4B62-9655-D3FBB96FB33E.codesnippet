@@ -3,25 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>assign</string>
+	<string>after</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// &lt;#name#&gt;
-@property (nonatomic, assign) &lt;#Class#&gt; &lt;#name#&gt;;</string>
+	<string>dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(&lt;#time#&gt; * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    &lt;#code#&gt;    
+});</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E1B1DF3A-70F9-4ED6-BE59-31F6506D96AD</string>
+	<string>7F5A0D1A-2DBD-4B62-9655-D3FBB96FB33E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>assign</string>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>My Assign</string>
+	<string>My After</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

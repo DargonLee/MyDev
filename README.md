@@ -136,7 +136,15 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 cnpm install [name]
 ```
 
-### iTerm2 安装
+### 终端工具
+
+#### Warp
+
+官网地址：https://www.warp.dev/
+
+GitHub：https://github.com/warpdotdev/Warp
+
+#### iTerm2 安装
 
 官网地址:http://iterm2.com/downloads.html
 
@@ -158,8 +166,6 @@ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 3、更改你的默认 Shell
 chsh -s /bin/zsh
 ```
-
-
 
 #### 修改默认的 shell
 

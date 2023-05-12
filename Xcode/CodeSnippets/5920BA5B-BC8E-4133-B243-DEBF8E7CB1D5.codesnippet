@@ -3,24 +3,33 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>delegate</string>
+	<string>shared</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, assign) id &lt;#@protocol#&gt; delegate;</string>
+	<string>+ (&lt;#name#&gt; *)shared
+{
+    static &lt;#name#&gt; *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&amp;onceToken, ^{
+        sharedInstance = [[&lt;#name#&gt; alloc] init];
+    });
+    
+    return sharedInstance;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>AB528830-6103-44B2-B65D-5EF1F3194116</string>
+	<string>5920BA5B-BC8E-4133-B243-DEBF8E7CB1D5</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>My Delegate</string>
+	<string>My Shared</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

@@ -30,6 +30,8 @@ brew -v
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://gitee.com/ineo6/homebrew-install/raw/master/install.sh)"
+或者
+/bin/bash -c "$(curl -fsSL https://gitee.com/wejectchan/brew/raw/master/install.sh)"
 ```
 
 安装慢可以设置镜像源 （中科大）:
@@ -629,3 +631,4 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl  /usr/loca
 - Visual Studio Code
 - ZY Player（https://github.com/Hunlongyu/ZY-Player）
 - XMind
+- OpenInTerminal(https://github.com/Ji4n1ng/OpenInTerminal)

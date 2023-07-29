@@ -328,68 +328,15 @@ plugins=(
 brew install cocoapods
 ```
 
-#### 安装 rvm
+#### 安装 ruby
 
-- 安装 mpapis 公钥。但是，正如安装页面所记录的，您可能需要 gpg。Mac OS X 不附带 gpg，因此在安装公钥之前，您需要安装 gpg。
-
-  ```shell
-  brew install gnupg
-  ```
-
-- 安装 mpapis 公钥
-
-  ```shell
-  gpg --keyserver hkp://pgp.mit.edu --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-  ```
-
-  如果显示从公钥服务器接收失败则尝试下面的
-
-  ```shell
-   gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-  ```
-
-- 安装 rvm
-
-  ```shell
-  # 安装RVM
-  curl -sSL https://get.rvm.io | bash -s stable --ruby
-  # 载入 RVM 环境
-  source ~/.rvm/scripts/rvm
-  # 修改 RVM 下载 Ruby 的源 为 Ruby China 镜像
-  echo "ruby_url=<https://cache.ruby-china.com/pub/ruby>" > ~/.rvm/user/db
-  # 检查安装结果(如果能显示版本号,则安装成功 )
-  rvm -v
-  ##打印以下结果,代表安装成功: rvm 1.29.9 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [<https://rvm.io/]> 
-  # 安装openssl 避免报错
-  rvm pkg install openssl 
-  ```
-
-- 常用命令
-
-  ```shell
-  ——查看rvm版本：rvm -v
-  ——查看现在使用RVM管理的Ruby版本：which rvm
-  ——列出可供RVM使用的Ruby版本：rvm list
-  ——列出可安装的版本：rvm list known
-  ```
-
-- 查看一下 Ruby 的版本
-
-  ```
-  rvm list known
-  ```
-
-- 可以看到当前的最新版本，然后通过以下命令来安装它：
-
-  ```shell
-  rvm install 2.6.0
-  ```
-
-  安装好后将它设为默认版本：
-
-  ```shell
-  rvm use 2.6.0 --default
-  ```
+```shell
+brew install ruby@3.0
+echo 'export PATH="/opt/homebrew/opt/ruby@3.0/bin:$PATH"' >> ~/.zshrc
+export LDFLAGS="-L/opt/homebrew/opt/ruby@3.0/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ruby@3.0/include"
+source ~/.zshrc
+```
 
 - 安装
 

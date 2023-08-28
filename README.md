@@ -333,6 +333,7 @@ brew install cocoapods
 ```shell
 brew install ruby@3.0
 echo 'export PATH="/opt/homebrew/opt/ruby@3.0/bin:$PATH"' >> ~/.zshrc
+
 export LDFLAGS="-L/opt/homebrew/opt/ruby@3.0/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/ruby@3.0/include"
 source ~/.zshrc

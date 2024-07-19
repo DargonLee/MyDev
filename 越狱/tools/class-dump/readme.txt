@@ -1,0 +1,1 @@
+ ./class-dump --arch arm64 E-Mobile7.decrypted -H -o ./Headers

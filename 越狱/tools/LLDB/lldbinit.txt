@@ -1,0 +1,4 @@
+command script import /opt/LLDB/lldb_commands/dslldb.py
+command script import /opt/homebrew/Cellar/chisel/2.0.1/libexec/fbchisellldb.py
+command script import /opt/xia0LLDB/src/xlldb.py
+command alias freshxlldb command script import /opt/xia0LLDB/src/xlldb.py

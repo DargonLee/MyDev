@@ -558,6 +558,19 @@ CodeSnippet
 ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl  /usr/local/bin/sublime
 ```
 
+### 创建软链接
+
+> 可以把写好的 shell 脚本在终端任何地方都可以执行
+
+```shell
+# 赋予执行权限
+chmod +x ~/scripts/my_script.sh
+# 创建软链接
+ln -s ~/scripts/my_script.sh /usr/local/bin/my_script
+```
+
+
+
 ### 必装软件
 
 - Alfred

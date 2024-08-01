@@ -1,0 +1,13 @@
+{
+    SAMKeychainErrorBadArguments = "\U6709\U4e9b\U8bc4\U8bba\U65e0\U6548";
+    errSecAllocate = "\U65e0\U6cd5\U5206\U914d\U5185\U5b58";
+    errSecAuthFailed = "\U8f93\U5165\U7684\U7528\U6237\U540d\U6216\U5bc6\U7801\U4e0d\U6b63\U786e";
+    errSecDecode = "\U65e0\U6cd5\U89e3\U7801\U63d0\U4f9b\U7684\U6570\U636e";
+    errSecDefault = "\U6709\U5173\U8bf4\U660e\Uff0c\U8bf7\U53c2\U9605SecBase.h\U3002";
+    errSecDuplicateItem = "\U6307\U5b9a\U7684\U9879\U5df2\U5b58\U5728\U4e8e\U94a5\U5319\U4e32\U4e2d";
+    errSecInteractionNotAllowed = "\U4e0d\U5141\U8bb8\U7528\U6237\U4ea4\U4e92";
+    errSecItemNotFound = "\U5728\U94a5\U5319\U4e32\U4e2d\U627e\U4e0d\U5230\U6307\U5b9a\U7684\U9879\U76ee";
+    errSecNotAvailable = "\U6ca1\U6709\U53ef\U7528\U7684\U94a5\U5319\U4e32\Uff0c\U53ef\U80fd\U9700\U8981\U91cd\U65b0\U542f\U52a8\U7535\U8111\U3002";
+    errSecParam = "\U4f20\U9012\U4e00\U4e2a\U6216\U591a\U4e2a\U65e0\U6548\U53c2\U6570\U7ed9\U51fd\U6570";
+    errSecUnimplemented = "\U529f\U80fd\U6216\U64cd\U4f5c\U672a\U5b9e\U73b0";
+}

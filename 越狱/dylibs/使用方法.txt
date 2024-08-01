@@ -1,0 +1,8 @@
+
+1，使用 TrollFools 将 YTLite 注入到油管。
+2，解压 YTLite.bundle 压缩包，得到 YTLite.bundle 文件夹。
+3，打开 Filza，路径：var/containers/Bundle/Application/，找到 YouTube，点击进入。
+使用 Filza，将刚刚的 BYTLite.bundle 文件夹，粘贴到 YouTube.app 目录下。 
+3，这样就可以使用了。
+
+微信公众号：艾橙互动 感谢您的关注！

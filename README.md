@@ -398,6 +398,16 @@ source ~/.zshrc
   // 清华大学镜像，速度杠杠的，推荐使用
   git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git  ~/.cocoapods/repos/trunk
   ```
+  
+  切换清华镜像
+
+```bash
+$ cd ~/.cocoapods/repos 
+$ pod repo remove master
+$ git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git master
+
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+```
 
 #### 更换源
 

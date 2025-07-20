@@ -46,6 +46,42 @@ git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.ustc
 brew update
 ```
 
+### Ruby 安装
+
+```bash
+$ brew install rbenv ruby-build 
+```
+
+```bash
+$ rbenv init
+
+# 每人的提示信息不一定相同，根据提示信息进行相关操作
+$ echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc
+```
+
+```bash
+$ rbenv install 2.7.6
+$ rbenv global 2.7.6
+```
+
+Gem 和 Bundler
+
+切换 Ruby 包管理工具的镜像源。Ruby 有两种常用包管理工具，Gem 和 Bundler。这两种包管理工具都会用到，因此需要将这两种包管理工具的镜像源都切换到国内。切换 Gem 镜像源的方法是通过 gem sources 命令进行切换，命令如下：
+
+```bash
+$ gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
+$ gem sources -l
+https://gems.ruby-china.com
+```
+
+这里我们使用 Ruby China 提供的镜像源进行安装。切换 Bundler 镜像源的方法是通过设置 config 进行切换，命令如下：
+
+```bash
+$ bundle config mirror.https://rubygems.org https://gems.ruby-china.com
+```
+
+具体来说，它会在 Bundler 的全局配置中添加一个 mirror.https://rubygems.org 的参数，将其值设置为 https://gems.ruby-china.com，表示在下载和安装包时使用 Ruby China 的镜像源地址。
+
 ### Python 安装
 
 官网地址:https://www.python.org/

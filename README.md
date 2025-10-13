@@ -211,12 +211,35 @@ GitHub：[warpdotdev/Warp](https://github.com/warpdotdev/Warp)
 Github地址：<https://github.com/fish-shell/fish-shell>
 
 ```bash
+# 安装
 brew install fish
 ```
+```bash
+# 查询fish路径	
+whereis fish
+```
+
 ```shell
 # 设置默认shell
-chsh -s /usr/bin/fish
+chsh -s /opt/homebrew/bin/fish
 ```
+
+```bash
+# 另一种方式设置默认shell
+cat /etc/shells
+sudo vim /etc/shells
+# 然后把下面这句放到第一个就可以了
+/opt/homebrew/bin/fish
+```
+
+安装 Oh My Fish
+
+```bash
+curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install > install
+fish install
+```
+
+
 
 ### zsh 安装(方式一)
 

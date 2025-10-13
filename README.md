@@ -4,7 +4,7 @@
 
 ### Homebrew 安装
 
-官网地址:https://brew.sh/
+官网地址: [brew.sh](https://brew.sh/)
 
 ```shell
 /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
@@ -46,6 +46,21 @@ git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.ustc
 brew update
 ```
 
+### 字体安装
+
+> Github地址：https://github.com/subframe7536/Maple-font
+
+```bash
+# Maple Mono
+brew install --cask font-maple-mono
+# Maple Mono NF
+brew install --cask font-maple-mono-nf
+# Maple Mono NF CN
+brew install --cask font-maple-mono-nf-cn
+```
+
+
+
 ### Ruby 安装
 
 ```bash
@@ -84,7 +99,7 @@ $ bundle config mirror.https://rubygems.org https://gems.ruby-china.com
 
 ### Python 安装
 
-官网地址:https://www.python.org/
+官网地址: [python.org](https://www.python.org/)
 
 #### 使用 Xcode 自带的
 
@@ -143,7 +158,7 @@ sudo python3 get-pip.py
 
 ### Nodejs 安装
 
-官网地址:http://nodejs.cn/download/
+官网地址: <http://nodejs.cn/download/>
 
 #### 安装包安装
 
@@ -156,8 +171,7 @@ PATH=$PATH:/usr/local/bin/
 #### 二进制库安装
 
 ```shell
-brew install nodejs
-brew install npm
+brew install node
 ```
 
 #### 验证
@@ -176,21 +190,49 @@ cnpm install [name]
 
 ### 终端工具
 
+#### Kitty(推荐)
+官网地址：<https://sw.kovidgoyal.net/kitty/>
+Github地址：<https://github.com/kovidgoyal/kitty>
+
 #### Warp
 
-官网地址：https://www.warp.dev/
+官网地址：[warp.dev](https://www.warp.dev/)
 
-GitHub：https://github.com/warpdotdev/Warp
+GitHub：[warpdotdev/Warp](https://github.com/warpdotdev/Warp)
 
 #### iTerm2 安装
 
-官网地址:http://iterm2.com/downloads.html
+官网地址：<http://iterm2.com/downloads.html>
 
-博客:https://zhuanlan.zhihu.com/p/550022490
+博客：<https://zhuanlan.zhihu.com/p/550022490>
 
-### oh-my-zsh 安装
+### fish(推荐)
+官网地址：<https://fishshell.com/>
+Github地址：<https://github.com/fish-shell/fish-shell>
 
-oh-my-zsh 的官网地址：https://ohmyz.sh/
+```bash
+brew install fish
+```
+```shell
+# 设置默认shell
+chsh -s /usr/bin/fish
+```
+
+### zsh 安装(方式一)
+
+官网地址：<https://zsh.sourceforge.io/>
+Github地址：<https://github.com/zsh-users/zsh>
+
+```bash
+brew install zsh
+```
+```shell
+chsh -s /bin/zsh
+```
+
+### oh-my-zsh 安装(方式二)
+
+oh-my-zsh 的官网地址：[ohmyz.sh](https://ohmyz.sh/)
 
 ```shell
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -223,13 +265,13 @@ cat /etc/shells
 
 如果你想修改为 `zsh` ，可以使用以下命令：
 
-```text
+```shell
 chsh -s /bin/zsh
 ```
 
 当然，你后悔了，想改回原来的 `dash` ，同样使用上面的 `chsh` 命令就可以。
 
-```text
+```shell
 chsh -s /bin/bash
 ```
 
@@ -239,7 +281,7 @@ chsh -s /bin/bash
 
 Github 地址：https://github.com/ohmyzsh/ohmyzsh/wiki/themes
 
-```text
+```shell
 vim ~/.zshrc
 ```
 
@@ -268,13 +310,13 @@ pip install powerline-status
 
 当然安装之前要确保你已经安装了 python 环境和 pip , python 环境一般 Mac 系统都会自带的，所以如果你在安装过程中遇到：
 
-```text
+```shell
 zsh: command not found: pip
 ```
 
 你也可以通过命令来安装
 
-```text
+```shell
 sudo easy_install pip
 ```
 
@@ -282,7 +324,7 @@ PowerFonts 是一个字体库，要安装字体库需要先把 `git clone` 到�
 
 具体的流程如下：
 
-```text
+```shell
 # git clone
 git clone https://github.com/powerline/fonts.git --depth=1
 # install
@@ -315,7 +357,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 - 找到 .zshrc 文件将 Dream_01.zshrc 或 Dream_02.zshrc 中代码复制到 zshrc 最下面
 - 文件目录 :
 
-```bash
+```shell
 open ~/.zshrc
 ```
 
@@ -472,7 +514,7 @@ pod search AFNetworking
 
 ![image-20220908150811298](README.assets/image-20220908150811298.png)
 
-下载安装包https://flutter.cn/docs/get-started/install/macos
+下载安装包：<https://flutter.cn/docs/get-started/install/macos>
 
 #### 解压到 `opt`文件夹目录下
 
@@ -489,7 +531,7 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 ### Java 安装
 
-官网地址：https://www.oracle.com/java/technologies/downloads
+官网地址：[Oracle Java 下载](https://www.oracle.com/java/technologies/downloads)
 
 #### 安装
 
@@ -589,12 +631,12 @@ command alias freshxlldb command script import /opt/xia0LLDB/src/xlldb.py
 
 ### 下载 Xcode 的工具
 
-https://xcdownloader.com/
-https://github.com/RobotsAndPencils/XcodesApp/
+<https://xcdownloader.com/>
+<https://github.com/RobotsAndPencils/XcodesApp/>
 
 CodeSnippet
 
-```powershell
+```shell
 ~/Library/Developer/Xcode/UserData/CodeSnippet
 ```
 
@@ -617,25 +659,26 @@ ln -s ~/scripts/my_script.sh /usr/local/bin/my_script
 
 
 
-### 必装软件
+### 常用软件
 
 - Alfred
+- Raycast
 - Android Studio
 - App Cleaner & Uninstaller
 - Beyond Compare
 - GitHub Desktop
 - Hopper Disassembler
-- LocalizationEditor（https://github.com/igorkulman/iOSLocalizationEditor）
-- LX Music（https://github.com/lyswhut/lx-music-desktop）
-- MachOView（https://github.com/fangshufeng/MachOView）
+- LocalizationEditor（[GitHub](https://github.com/igorkulman/iOSLocalizationEditor)）
+- LX Music（[GitHub](https://github.com/lyswhut/lx-music-desktop)）
+- MachOView（[GitHub](https://github.com/fangshufeng/MachOView)）
 - Microsoft Edge
 - OneDrive
 - Pasta
 - Snipaste
 - Sublime Text
 - SwitchHosts!
-- Typora（主题：https://github.com/liangjingkanji/DrakeTyporaTheme）
+- Typora（主题：[DrakeTyporaTheme](https://github.com/liangjingkanji/DrakeTyporaTheme)）
 - Visual Studio Code
-- ZY Player（https://github.com/Hunlongyu/ZY-Player）
+- ZY Player（[GitHub](https://github.com/Hunlongyu/ZY-Player)）
 - XMind
-- OpenInTerminal(https://github.com/Ji4n1ng/OpenInTerminal)
+- OpenInTerminal（[GitHub](https://github.com/Ji4n1ng/OpenInTerminal)）

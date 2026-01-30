@@ -1,0 +1,510 @@
+__build_info:
+  rime_version: 1.13.0
+  timestamps:
+    default: 1767506957
+    default.custom: 0
+    wubi86_jidian.custom: 0
+    wubi86_jidian.schema: 1766941687
+chineseLunarCalendar_translator: lunar
+date_formats:
+  - "Y年m月d日"
+  - "Y-m-d"
+  - "Y/m/d"
+  - Y.m.d
+  - Ymd
+  - "Y年n月j日"
+  - "y年n月j日"
+  - "n月j日"
+datetime_formats:
+  - "Y-m-d H:M:S"
+  - "Y-m-dTH:M:S O"
+  - YmdHMS
+  - "Y年m月d日 H点M分"
+  - "y/m/d I:M p"
+emoji_suggestion:
+  inherit_comment: false
+  opencc_config: emoji.json
+  option_name: emoji_suggestion
+  tips: all
+engine:
+  filters:
+    - "lua_filter@*autocap_filter"
+    - "simplifier@emoji_suggestion"
+    - "lua_filter@*autocap_filter"
+    - "simplifier@transcription_cc"
+    - "lua_filter@*reduce_english_filter"
+    - uniquifier
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - "affix_segmentor@rime_mint"
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator
+    - "lua_translator@*shijian"
+    - "lua_translator@*number_translator"
+    - "lua_translator@*chineseLunarCalendar_translator"
+    - "lua_translator@*mint_calculator_translator"
+    - "table_translator@melt_eng"
+    - "reverse_lookup_translator@rime_mint"
+    - "lua_translator@*force_gc"
+key_binder:
+  bindings:
+    - {accept: "Control+p", send: Up, when: composing}
+    - {accept: "Control+n", send: Down, when: composing}
+    - {accept: "Control+b", send: Left, when: composing}
+    - {accept: "Control+f", send: Right, when: composing}
+    - {accept: "Control+a", send: Home, when: composing}
+    - {accept: "Control+e", send: End, when: composing}
+    - {accept: "Control+d", send: Delete, when: composing}
+    - {accept: "Control+k", send: "Shift+Delete", when: composing}
+    - {accept: "Control+g", send: Escape, when: composing}
+    - {accept: "Alt+v", send: Page_Up, when: composing}
+    - {accept: "Control+v", send: Page_Down, when: composing}
+    - {accept: ISO_Left_Tab, send: "Shift+Left", when: composing}
+    - {accept: "Shift+Tab", send: "Shift+Left", when: composing}
+    - {accept: Tab, send: "Shift+Right", when: composing}
+    - {accept: minus, send: Page_Up, when: paging}
+    - {accept: equal, send: Page_Down, when: has_menu}
+    - {accept: comma, send: Page_Up, when: paging}
+    - {accept: period, send: Page_Down, when: has_menu}
+    - {accept: comma, send: comma, when: predicting}
+    - {accept: period, send: period, when: predicting}
+    - {accept: "Control+Shift+1", select: .next, when: always}
+    - {accept: "Control+Shift+2", toggle: ascii_mode, when: always}
+    - {accept: "Control+Shift+3", toggle: full_shape, when: always}
+    - {accept: "Control+Shift+4", toggle: transcription, when: always}
+    - {accept: "Control+Shift+5", toggle: extended_charset, when: always}
+    - {accept: "Shift+space", toggle: full_shape, when: always}
+    - {accept: "Control+period", toggle: ascii_punct, when: always}
+    - {accept: "Control+Shift+E", toggle: emoji_suggestion, when: always}
+    - {accept: "Control+Shift+1", toggle: transcription, when: has_menu}
+    - {accept: "Control+Shift+exclam", toggle: transcription, when: has_menu}
+  import_preset: default
+  shijian_keys:
+    - o
+melt_eng:
+  dictionary: melt_eng
+  enable_completion: false
+  enable_sentence: false
+  initial_quality: 0.8
+menu:
+  page_size: 6
+punctuator:
+  full_shape:
+    " ": {commit: "　"}
+    "!": {commit: "！"}
+    "\"": {pair: ["“", "”"]}
+    "#": ["＃", "⌘"]
+    "$": ["￥", "$", "€", "£", "¥", "¢", "¤"]
+    "%": ["％", "°", "℃"]
+    "&": "＆"
+    "'": {pair: ["‘", "’"]}
+    "(": "（"
+    ")": "）"
+    "*": ["＊", "・", "·", "×", "※", "❂"]
+    "+": "＋"
+    ",": {commit: "，"}
+    "-": "－"
+    .: {commit: "。"}
+    "/": ["／", "÷"]
+    ":": {commit: "："}
+    ";": {commit: "；"}
+    "<": ["《", "〈", "«", "‹"]
+    "=": "＝"
+    ">": ["》", "〉", "»", "›"]
+    "?": {commit: "？"}
+    "@": ["＠", "☯"]
+    "[": ["「", "【", "〔", "［"]
+    "\\": ["、", "＼"]
+    "]": ["」", "】", "〕", "］"]
+    "^": {commit: "……"}
+    _: "——"
+    "`": "｀"
+    "{": ["『", "〖", "｛"]
+    "|": ["・", "｜", "§", "¦"]
+    "}": ["』", "〗", "｝"]
+    "~": ["〜", "～", "〰"]
+  half_shape:
+    "!": {commit: "！"}
+    "\"": {pair: ["“", "”"]}
+    "#": "#"
+    "$": ["¥", "$", "€", "£", "¢", "¤"]
+    "%": ["%", "％", "°", "℃"]
+    "&": "&"
+    "'": {pair: ["「", "」"]}
+    "(": "（"
+    ")": "）"
+    "*": "*"
+    "+": "+"
+    ",": {commit: "，"}
+    "-": "-"
+    .: {commit: "。"}
+    "/": ["/", "÷"]
+    ":": {commit: "："}
+    ";": {commit: "；"}
+    "<": ["《", "〈", "«", "<"]
+    "=": "="
+    ">": ["》", "〉", "»", ">"]
+    "?": {commit: "？"}
+    "@": "@"
+    "[": ["【", "["]
+    "\\": "、"
+    "]": ["】", "]"]
+    "^": {commit: "……"}
+    _: "──"
+    "`": "`"
+    "{": ["『", "〖", "｛"]
+    "|": ["・", "|", "｜", "§", "¦"]
+    "}": ["』", "〗", "｝"]
+    "~": "~"
+  import_preset: default
+recognizer:
+  import_preset: default
+  patterns:
+    email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+    expression: "^=.*$"
+    gregorian_to_lunar: "^N[0-9]{1,8}"
+    punct: "^/([0-9]0?|[a-zA-Z]+)$"
+    rime_mint: "^Up[a-z]*'?$"
+    rmb: "^R[0-9]+[.]?[0-9]*"
+    uppercase: ""
+    url: "^[a-z]+[.].+$"
+reduce_english_filter:
+  idx: 2
+  mode: all
+  words:
+    - aid
+    - ann
+    - bail
+    - bait
+    - bam
+    - band
+    - bans
+    - bat
+    - bay
+    - bend
+    - bent
+    - benz
+    - bib
+    - bid
+    - bien
+    - biz
+    - boc
+    - bop
+    - bos
+    - bud
+    - buf
+    - cab
+    - cad
+    - cain
+    - cam
+    - cans
+    - cap
+    - cas
+    - cef
+    - chad
+    - chan
+    - chap
+    - chef
+    - cher
+    - chew
+    - chic
+    - chin
+    - chip
+    - chit
+    - coup
+    - cum
+    - cunt
+    - cur
+    - dab
+    - dag
+    - dal
+    - dam
+    - dent
+    - dew
+    - dial
+    - diet
+    - dim
+    - din
+    - dip
+    - dis
+    - dit
+    - doug
+    - dub
+    - dug
+    - dunn
+    - fab
+    - fax
+    - fob
+    - fog
+    - foul
+    - fur
+    - gag
+    - gail
+    - gain
+    - gal
+    - gam
+    - gaol
+    - ged
+    - gel
+    - ger
+    - guam
+    - gus
+    - gut
+    - hail
+    - ham
+    - hank
+    - hans
+    - hat
+    - hay
+    - heil
+    - heir
+    - hem
+    - hep
+    - hud
+    - hum
+    - hung
+    - hunk
+    - hut
+    - jim
+    - jug
+    - kat
+    - lab
+    - lad
+    - lag
+    - laid
+    - lam
+    - laos
+    - lap
+    - lat
+    - lax
+    - lay
+    - led
+    - leg
+    - lex
+    - liam
+    - lib
+    - lid
+    - lied
+    - lien
+    - lies
+    - linn
+    - lip
+    - lit
+    - liz
+    - lob
+    - lug
+    - lund
+    - lung
+    - lux
+    - mag
+    - maid
+    - mann
+    - mar
+    - mat
+    - med
+    - mel
+    - mend
+    - mens
+    - ment
+    - mil
+    - mins
+    - mint
+    - mob
+    - moc
+    - mop
+    - mos
+    - mot
+    - mud
+    - mug
+    - mum
+    - nail
+    - nap
+    - nat
+    - nay
+    - neil
+    - nib
+    - nip
+    - noun
+    - nous
+    - nun
+    - nut
+    - pac
+    - paid
+    - pail
+    - pain
+    - pair
+    - pak
+    - pal
+    - pam
+    - pans
+    - pant
+    - pap
+    - par
+    - pat
+    - paw
+    - pax
+    - pens
+    - pic
+    - pier
+    - pies
+    - pins
+    - pint
+    - pit
+    - pix
+    - pod
+    - pop
+    - pos
+    - pot
+    - pour
+    - pow
+    - pub
+    - rand
+    - rant
+    - rent
+    - rep
+    - res
+    - ret
+    - rex
+    - rib
+    - rid
+    - rig
+    - rim
+    - rub
+    - rug
+    - rum
+    - runc
+    - runs
+    - sac
+    - sail
+    - sal
+    - sam
+    - sans
+    - sap
+    - saw
+    - sax
+    - sew
+    - sham
+    - shaw
+    - shin
+    - sig
+    - sin
+    - sip
+    - sis
+    - suit
+    - sung
+    - suns
+    - sup
+    - sur
+    - sus
+    - tad
+    - tail
+    - taj
+    - tar
+    - tax
+    - tec
+    - ted
+    - tel
+    - ter
+    - tex
+    - tic
+    - tied
+    - tier
+    - ties
+    - tim
+    - tin
+    - tit
+    - tour
+    - tout
+    - tum
+    - wag
+    - wand
+    - womens
+    - wap
+    - wax
+    - weir
+    - won
+    - yan
+    - yen
+reverse_lookup:
+  overwrite_comment: true
+  tags:
+    - rime_mint
+rime_mint:
+  dictionary: rime_mint
+  enable_completion: true
+  enable_user_dict: false
+  prefix: Up
+  tag: rime_mint
+  tips: "〔拼音〕"
+schema:
+  author:
+    - "创始人 王永民先生"
+    - "修改者 KyleBing <https://github.com/KyleBing/rime-wubi86-jidian>"
+    - "修改者 Mintimate"
+  dependencies:
+    - melt_eng
+    - rime_mint
+  description: |
+    - 五笔字形 86 极点极爽版，方案由 KyleBing 修改 - 2019年11月08日 10:26
+    - 经 KyleBing 授权，Mintimate 引入薄荷输入配置内
+
+  name: "五笔86-极点五笔"
+  schema_id: wubi86_jidian
+  version: 24.09.25
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
+  delimiter: " `"
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: ["中文", "英文"]
+  - name: emoji_suggestion
+    reset: 1
+    states: ["😣️", "😁️"]
+  - name: full_shape
+    reset: 0
+    states: ["半角", "全角"]
+  - name: transcription
+    reset: 0
+    states: ["简体", "繁体"]
+  - name: ascii_punct
+    reset: 0
+    states: ["。，", "．，"]
+time_formats:
+  - "H:M"
+  - "H点M分"
+  - "H:M:S"
+  - "H时M分S秒"
+  - "下午I:M"
+  - "I:M P"
+transcription_cc:
+  excluded_types:
+    - reverse_lookup
+  opencc_config: s2t.json
+  option_name: transcription
+  tips: none
+translator:
+  dictionary: wubi86_jidian
+  disable_user_dict_for_patterns:
+    - "^z.*$"
+  enable_charset_filter: false
+  enable_completion: false
+  enable_encoder: false
+  enable_sentence: false
+  enable_user_dict: false
+  encode_commit_history: false
+  initial_quality: 1.2

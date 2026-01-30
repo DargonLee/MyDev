@@ -1,0 +1,62 @@
+__build_info:
+  rime_version: 1.13.0
+  timestamps:
+    squirrel: 1766941687
+    squirrel.custom: 1767509852
+chord_duration: 0.1
+config_version: "2024-09-14"
+keyboard_layout: default
+preset_color_schemes:
+  apple_system_dark:
+    author: "Apple Design"
+    back_color: 0xD91E1E1E
+    border_color: 0x001E1E1E
+    candidate_text_color: 0xFFFFFF
+    color_space: srgb
+    comment_text_color: 0x636366
+    hilited_candidate_back_color: 0xFF7A00
+    hilited_candidate_label_color: 0xFFFFFF
+    hilited_candidate_text_color: 0xFFFFFF
+    hilited_text_color: 0xFF9F0A
+    label_color: 0x8E8E93
+    name: "Apple System Dark"
+    text_color: 0xF2F2F7
+  apple_system_light:
+    author: "Apple Design"
+    back_color: 0xE6FFFFFF
+    border_color: 0xE6FFFFFF
+    candidate_text_color: 0x000000
+    color_space: srgb
+    comment_text_color: 0xC7C7CC
+    hilited_candidate_back_color: 0xFF7A00
+    hilited_candidate_label_color: 0xCCFFFF
+    hilited_candidate_text_color: 0xFFFFFF
+    hilited_text_color: 0xFF7A00
+    label_color: 0x8E8E93
+    name: "Apple System Light"
+    text_color: 0x333333
+show_notifications_when: appropriate
+style:
+  alpha: 1.0
+  blur: true
+  border_height: 0
+  border_width: 0
+  candidate_format: "[label]. [candidate] [comment]"
+  candidate_list_layout: linear
+  color_scheme: apple_system_light
+  color_scheme_dark: apple_system_dark
+  corner_radius: 10
+  font_face: "PingFang SC"
+  font_point: 17
+  hilited_corner_radius: 6
+  inline_candidate: false
+  inline_preedit: true
+  label_font_point: 13
+  line_spacing: 5
+  shadow_size: 8
+  showPaging: false
+  spacing: 15
+  status_message_type: mix
+  text_orientation: horizontal
+  translucency: true
+  window_height_status: 30

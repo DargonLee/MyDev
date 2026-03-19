@@ -1,11 +1,11 @@
 __build_info:
-  rime_version: 1.13.0
+  rime_version: 1.16.0
   timestamps:
-    default: 1767506957
+    default: 1773890732
     default.custom: 0
-    rime_mint_flypy.custom: 0
-    rime_mint_flypy.schema: 1766941687
-    symbols: 1766941687
+    rime_mint_flypy.custom: 1770292455
+    rime_mint_flypy.schema: 1772503074
+    symbols: 1772503074
     symbols.custom: 0
 chineseLunarCalendar_translator: lunar
 cn_en:
@@ -869,7 +869,7 @@ time_formats:
   - "H点M分"
   - "H:M:S"
   - "H时M分S秒"
-  - "下午I:M"
+  - "AI:M"
   - "I:M P"
 transcription_cc:
   excluded_types:
@@ -880,7 +880,8 @@ transcription_cc:
 translator:
   always_show_comments: true
   comment_format:
-    {}
+    - "xform/([nljqxy])ü/$1v/"
+    - "xform/([nl])üe/$1ve/"
   dictionary: rime_mint
   enable_user_dict: true
   initial_quality: 1.2

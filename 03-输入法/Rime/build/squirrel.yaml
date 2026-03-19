@@ -1,8 +1,8 @@
 __build_info:
-  rime_version: 1.13.0
+  rime_version: 1.16.0
   timestamps:
-    squirrel: 1766941687
-    squirrel.custom: 1767509852
+    squirrel: 1772503074
+    squirrel.custom: 1769754673
 chord_duration: 0.1
 config_version: "2024-09-14"
 keyboard_layout: default
@@ -45,7 +45,7 @@ style:
   candidate_list_layout: linear
   color_scheme: apple_system_light
   color_scheme_dark: apple_system_dark
-  corner_radius: 10
+  corner_radius: 8
   font_face: "PingFang SC"
   font_point: 17
   hilited_corner_radius: 6

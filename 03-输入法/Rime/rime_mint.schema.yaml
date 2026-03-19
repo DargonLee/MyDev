@@ -124,6 +124,7 @@ engine:
 # 【时区】
 #   O  带冒号格式        +08:00、-04:30、+05:45
 #   o  不带冒号格式      +0800、-0430、+0545
+#   A  中文时段    凌晨 / 上午 / 中午 / 下午 / 晚上
 date_formats:
   - "Y年m月d日"
   - "Y-m-d"
@@ -138,7 +139,7 @@ time_formats:
   - "H点M分"
   - "H:M:S"
   - "H时M分S秒"
-  - "下午I:M"
+  - "AI:M"
   - "I:M P"
 datetime_formats:
   - "Y-m-d H:M:S"
@@ -248,8 +249,8 @@ speller:
     - erase/^xx$/ # 首选保留
     # - derive/^([zcs])h/$1/ # zh, ch, sh => z, c, s
     # - derive/^([zcs])([^h])/$1h$2/ # z, c, s => zh, ch, sh
-    # - derive/([aei])n$/$1ng/ # en => eng, in => ing
-    # - derive/([aei])ng$/$1n/ # eng => en, ing => in
+    # - derive/([aei])n$/$1ng/ # an => ang, en => eng, in => ing
+    # - derive/([aei])ng$/$1n/ # ang => an, eng => en, ing => in
     # - derive/([iu])an$/$lan/ # ian => iang, uan => uang
     # - derive/([iu])ang$/$lan/ # iang => ian, uang => uan
     - derive/([aeiou])ng$/$1gn/        # dagn => dang
@@ -417,8 +418,10 @@ key_binder:
     - {accept: "Control+Shift+exclam", toggle: transcription, when: has_menu}      # 当存在候选菜单时，可以切换简体和繁体（小狼毫可能读取这个）
 
 
+menu:
   # 候选词个数
   page_size: 6
+
 
 
 

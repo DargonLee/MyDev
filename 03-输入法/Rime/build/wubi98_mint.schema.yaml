@@ -1,10 +1,10 @@
 __build_info:
-  rime_version: 1.13.0
+  rime_version: 1.16.0
   timestamps:
-    default: 1767506957
+    default: 1773890732
     default.custom: 0
     wubi98_mint.custom: 0
-    wubi98_mint.schema: 1766941687
+    wubi98_mint.schema: 1772503074
 chineseLunarCalendar_translator: lunar
 date_formats:
   - "Y年m月d日"
@@ -490,7 +490,7 @@ time_formats:
   - "H点M分"
   - "H:M:S"
   - "H时M分S秒"
-  - "下午I:M"
+  - "AI:M"
   - "I:M P"
 transcription_cc:
   excluded_types:

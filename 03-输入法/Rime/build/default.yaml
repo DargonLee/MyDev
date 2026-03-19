@@ -1,7 +1,7 @@
 __build_info:
-  rime_version: 1.13.0
+  rime_version: 1.16.0
   timestamps:
-    default: 1767506957
+    default: 1773890732
     default.custom: 0
 ascii_composer:
   good_old_caps_lock: true
@@ -118,12 +118,6 @@ recognizer:
     url: "^(www[.]|https?:|ftp:|mailto:).*$|^[a-z]+[.].+$"
 schema_list:
   - schema: rime_mint_flypy
-  - schema: rime_mint
-  - schema: double_pinyin_flypy
-  - schema: terra_pinyin
-  - schema: wubi98_mint
-  - schema: wubi86_jidian
-  - schema: t9
 switcher:
   abbreviate_options: true
   caption: "〔方案切换〕"

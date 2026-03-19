@@ -1,0 +1,4 @@
+patch:
+  # 对 speller/algebra 进行追加
+  "speller/algebra/+":
+    - derive/v/u/ # u => ü

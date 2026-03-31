@@ -156,6 +156,42 @@ sudo python2 get-pip.py
 sudo python3 get-pip.py
 ```
 
+#### uv 安装
+
+uv 是一个现代化的 Python 包管理工具，比 pip 更快更高效。
+
+**安装方式**
+
+```shell
+# Homebrew 安装
+brew install uv
+
+# 或官方脚本安装
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+**设置国内镜像源**
+
+```shell
+# 设置清华源（推荐）
+export UV_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+
+# 或设置阿里云源
+export UV_INDEX_URL=https://mirrors.aliyun.com/pypi/simple
+
+# 添加到 ~/.zshrc 永久生效
+echo 'export UV_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple' >> ~/.zshrc
+```
+
+**常用命令**
+
+```shell
+uv pip install <package>     # 安装包
+uv pip install -r requirements.txt  # 从文件安装
+uv pip list                  # 查看已安装包
+uv pip uninstall <package>   # 卸载包
+```
+
 ### Nodejs 安装
 
 官网地址: <http://nodejs.cn/download/>
